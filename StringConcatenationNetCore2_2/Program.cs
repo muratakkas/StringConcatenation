@@ -1,5 +1,6 @@
 ﻿using StringConcatLibrary;
 using System;
+using System.Collections.Generic;
 
 namespace StringConcatenationNetCore2_2
 {
@@ -7,7 +8,12 @@ namespace StringConcatenationNetCore2_2
     {
         static void Main(string[] args)
         {
-            ConcatHelper.StartTest("2_2");
+            Dictionary<string, string> blockNames = new Dictionary<string, string>();
+            blockNames.Add(ConcatHelper.BLOCK_1, "C");
+            blockNames.Add(ConcatHelper.BLOCK_2, "F");
+            blockNames.Add(ConcatHelper.BLOCK_3, "I");
+            blockNames.Add(ConcatHelper.BLOCK_4, "L");
+            ConcatHelper.StartTest("2_2", blockNames);
         }
     }
 }
